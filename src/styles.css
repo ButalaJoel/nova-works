@@ -552,3 +552,15 @@ video.media { width: 100%; height: auto; max-height: 82vh; object-fit: contain; 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
+
+/* ---------- Logo wall ---------- */
+.logos__grid { list-style: none; margin: clamp(32px, 5vw, 56px) 0 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+.logos__tile > a, .logos__tile > div { display: block; position: relative; overflow: hidden; border-radius: 14px; border: 1px solid var(--line); color: inherit; text-decoration: none; }
+.logos__tile img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
+.logos__cap { position: absolute; inset: auto 0 0 0; display: grid; gap: 2px; padding: 12px 14px; background: var(--ink); color: var(--paper); font-size: 0.82rem; transform: translateY(101%); transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1); }
+.logos__cap strong { font: 600 0.9rem/1.2 var(--font-display); }
+.logos__cap span { font: 500 0.66rem/1.3 var(--font-mono); letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.7; }
+.logos__tile:hover img { transform: scale(1.05); }
+.logos__tile:hover .logos__cap, .logos__tile :focus-visible .logos__cap { transform: none; }
+@media (hover: none) { .logos__cap { position: static; transform: none; background: transparent; color: var(--fg); padding: 10px 2px 0; } }
+@media (max-width: 900px) { .logos__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }

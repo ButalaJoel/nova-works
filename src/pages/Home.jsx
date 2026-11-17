@@ -9,6 +9,7 @@ import ProjectIndex from '../sections/ProjectIndex.jsx'
 import ProblemsStack from '../sections/ProblemsStack.jsx'
 import CapabilitiesMotion from '../sections/CapabilitiesMotion.jsx'
 import StudioMotion from '../sections/StudioMotion.jsx'
+import LogoWall from '../sections/LogoWall.jsx'
 import { Contact } from '../components/Contact.jsx'
 
 export default function Home() {
@@ -22,6 +23,7 @@ export default function Home() {
         <WorkCollage />
         <MotionRibbon />
         <ProjectIndex />
+        <LogoWall />
         <ProblemsStack />
         <CapabilitiesMotion />
         <StudioMotion />

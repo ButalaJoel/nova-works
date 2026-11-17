@@ -192,6 +192,7 @@ export function Footer() {
         </div>
         <nav className="footer__links" aria-label="Footer">
           <Link to="/#work">Work</Link>
+          <Link to="/#logos">Logos</Link>
           <Link to="/#problems">Problems we solve</Link>
           <Link to="/#capabilities">Capabilities</Link>
           <Link to="/#founder">Studio</Link>
