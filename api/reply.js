@@ -13,6 +13,7 @@ export default async function handler(req, res) {
   const resendKey = process.env.RESEND_API_KEY
   const from = process.env.MAIL_FROM
 
+  if (!url || !anon) return res.status(500).json({ error: 'Server is missing its Supabase settings.' })
   if (!resendKey || !from) {
     return res.status(501).json({
       error: 'Email sending is not set up yet. Use "Open in Gmail" for now, or add RESEND_API_KEY and MAIL_FROM in Vercel.',
@@ -27,11 +28,17 @@ export default async function handler(req, res) {
     headers: { apikey: anon, Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' },
     body: '{}',
   })
-  const isAdmin = check.ok ? await check.json() : false
+  const isAdmin = check.ok ? await check.json().catch(() => false) : false
   if (isAdmin !== true) return res.status(403).json({ error: 'Your account is not allowed to send replies.' })
 
   const { to, subject, text } = req.body || {}
-  if (!to || !subject || !text) return res.status(400).json({ error: 'Recipient, subject and message are required.' })
+  if (typeof to !== 'string' || typeof subject !== 'string' || typeof text !== 'string' || !to || !subject || !text) {
+    return res.status(400).json({ error: 'Recipient, subject and message are required.' })
+  }
+  // Validate on the server, not just in the browser.
+  if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(to) || to.length > 200) return res.status(400).json({ error: 'That email address is not valid.' })
+  if (subject.length > 200 || /[\r\n]/.test(subject)) return res.status(400).json({ error: 'The subject must be one line, under 200 characters.' })
+  if (text.length > 20000) return res.status(400).json({ error: 'The message is too long.' })
 
   const send = await fetch('https://api.resend.com/emails', {
     method: 'POST',

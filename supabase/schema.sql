@@ -112,3 +112,45 @@ create policy "Admins change portfolio media" on storage.objects
 drop policy if exists "Admins delete portfolio media" on storage.objects;
 create policy "Admins delete portfolio media" on storage.objects
   for delete to authenticated using (bucket_id = 'portfolio' and public.is_admin());
+
+-- 5. Security hardening (safe to run again) ----------------------------------
+-- Run this whole file again in the SQL Editor after any update; every step is repeatable.
+
+-- Enquiries: reject malformed emails and oversized fields at the database.
+do $$ begin
+  alter table public.enquiries add constraint enquiries_email_format
+    check (email ~* '^[^@\s]+@[^@\s]+\.[^@\s]+$');
+exception when duplicate_object then null; end $$;
+do $$ begin
+  alter table public.enquiries add constraint enquiries_area_len check (char_length(area) <= 120);
+exception when duplicate_object then null; end $$;
+
+-- Enquiries: rate limit. At most 3 messages per email address per hour,
+-- and 30 messages in total per 10 minutes (stops bots flooding the inbox).
+create or replace function public.enquiries_rate_limit()
+returns trigger
+language plpgsql
+security definer
+set search_path = public
+as $$
+begin
+  if (select count(*) from public.enquiries
+      where lower(email) = lower(new.email) and created_at > now() - interval '1 hour') >= 3 then
+    raise exception 'Too many messages from this email. Please try again later or message us on WhatsApp.';
+  end if;
+  if (select count(*) from public.enquiries where created_at > now() - interval '10 minutes') >= 30 then
+    raise exception 'We are receiving a lot of messages right now. Please try again shortly.';
+  end if;
+  return new;
+end;
+$$;
+
+drop trigger if exists enquiries_rate_limit on public.enquiries;
+create trigger enquiries_rate_limit before insert on public.enquiries
+  for each row execute function public.enquiries_rate_limit();
+
+-- Storage: only images and videos, 50 MB max per file. (No SVG: it can carry scripts.)
+update storage.buckets
+set file_size_limit = 52428800,
+    allowed_mime_types = array['image/jpeg', 'image/png', 'image/webp', 'image/gif', 'video/mp4', 'video/webm']
+where id = 'portfolio';

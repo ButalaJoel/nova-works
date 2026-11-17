@@ -564,3 +564,5 @@ video.media { width: 100%; height: auto; max-height: 82vh; object-fit: contain; 
 .logos__tile:hover .logos__cap, .logos__tile :focus-visible .logos__cap { transform: none; }
 @media (hover: none) { .logos__cap { position: static; transform: none; background: transparent; color: var(--fg); padding: 10px 2px 0; } }
 @media (max-width: 900px) { .logos__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+.form__hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }

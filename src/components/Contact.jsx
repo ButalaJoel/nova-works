@@ -26,6 +26,8 @@ export function Contact() {
   async function onSubmit(e) {
     e.preventDefault()
     const f = Object.fromEntries(new FormData(e.currentTarget))
+    // Honeypot: people never see this field, bots fill it in. Pretend it worked.
+    if (f.website) { setState('sent'); return }
     const enquiry = {
       name: f.name.trim(),
       company: f.company.trim() || null,
@@ -115,24 +117,25 @@ export function Contact() {
           </div>
         ) : (
           <form className="form" onSubmit={onSubmit}>
+            <input type="text" name="website" tabIndex={-1} autoComplete="off" aria-hidden="true" className="form__hp" />
             <div className="form__row form__row--2">
               <label>
                 Your name
-                <input id="f-name" name="name" required autoComplete="name" />
+                <input id="f-name" name="name" required maxLength={120} autoComplete="name" />
               </label>
               <label>
                 Business
-                <input id="f-company" name="company" autoComplete="organization" />
+                <input id="f-company" name="company" maxLength={160} autoComplete="organization" />
               </label>
             </div>
             <div className="form__row form__row--2">
               <label>
                 Email
-                <input id="f-email" name="email" type="email" required autoComplete="email" />
+                <input id="f-email" name="email" type="email" required maxLength={200} autoComplete="email" />
               </label>
               <label>
                 Phone / WhatsApp
-                <input id="f-phone" name="phone" type="tel" autoComplete="tel" placeholder="Optional" />
+                <input id="f-phone" name="phone" type="tel" maxLength={40} autoComplete="tel" placeholder="Optional" />
               </label>
             </div>
             <label>
@@ -140,6 +143,7 @@ export function Contact() {
               <textarea
                 id="f-message"
                 name="message"
+                maxLength={5000}
                 rows="4"
                 required
                 placeholder="e.g. Our logo looks different on every sign, bag and post, and customers don't recognise us."
