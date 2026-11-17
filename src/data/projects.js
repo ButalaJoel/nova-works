@@ -48,14 +48,13 @@ export const projects = [
     featured: true,
     sort_order: 1,
     summary:
-      'Brand guidelines, packaging, product mockups, a 92-page catalogue, social media, video and a new website for "The Painters\u2019 Paint".',
+      'Packaging, product mockups, a 92-page catalogue, social media, video and a new website for "The Painters\u2019 Paint".',
     problem:
       'A Ugandan paint brand clients have known for about 30 years had a wide range of decorative, industrial, waterproofing and wood care products, but no single system tying its logo, packaging, catalogue and social media together, and no website it fully owns.',
     solution:
-      'We set down the brand in a full guidelines manual, designed packaging and product mockups across the range, produced the 2026 product catalogue, and run the social media with posters and short videos. A catalogue website with colour systems, data sheets and quote requests is in build.',
-    disciplines: ['Brand identity', 'Packaging', 'Graphic design', 'Print & stationery', 'Social media', 'Video ads', 'Website'],
+      'We designed packaging and product mockups across the range, produced the 2026 product catalogue, and run the social media with posters and short videos. A catalogue website with colour systems, data sheets and quote requests is in build.',
+    disciplines: ['Packaging', 'Graphic design', 'Print & stationery', 'Social media', 'Video ads', 'Website'],
     deliverables: [
-      'Brand guidelines & identity manual',
       'Packaging & labels',
       'Product mockups',
       'Product catalogue 2026 (92 pages)',
@@ -67,19 +66,6 @@ export const projects = [
     stack: ['Illustrator', 'Photoshop', 'React', 'Supabase'],
     cover_url: '/projects/peacock-paints/cover-product-range.jpg',
     sections: [
-      {
-        title: 'Brand identity & guidelines',
-        body: 'The peacock fan and "The Painters\u2019 Paint" lockup, set down in a 36-page manual: logo system and variations, a turquoise, mustard, orange and black palette, typography, packaging rules and social media layouts.',
-        media: [
-          '/projects/peacock-paints/brand-logo.jpg',
-          '/projects/peacock-paints/guidelines-cover.jpg',
-          '/projects/peacock-paints/guidelines-colours.jpg',
-          '/projects/peacock-paints/guidelines-logo-variations.jpg',
-          '/projects/peacock-paints/guidelines-product-mockups.jpg',
-          '/projects/peacock-paints/guidelines-social-layouts.jpg',
-          '/projects/peacock-paints/guidelines-contents.jpg',
-        ],
-      },
       {
         title: 'Packaging & product mockups',
         body: 'One recognisable system across buckets, tins and sacks: the logo badge on top, a bold product name and a colour field for each range, from Weather Shield Plus to Epoxy Self Levelling.',
