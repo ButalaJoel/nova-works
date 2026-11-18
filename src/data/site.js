@@ -6,7 +6,7 @@ export const site = {
   city: 'Kampala, Uganda',
 
   // TODO: replace with the real company contacts before going live.
-  email: 'hello@novaworks.co.ug',
+  email: 'btljoel97@gmail.com',
   // WhatsApp number in international format, digits only, e.g. '2567XXXXXXXX'.
   // Leave empty to hide the WhatsApp buttons.
   whatsapp: import.meta.env.VITE_WHATSAPP || '256786713906',

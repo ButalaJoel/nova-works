@@ -524,6 +524,55 @@ export const projects = [
     ],
   }),
   p({
+    slug: 'beer-bros',
+    name: 'Beer BROS',
+    client: 'Nova Works venture',
+    category: 'venture',
+    status: 'live',
+    sector: 'Social · Nightlife',
+    sort_order: 8,
+    summary: 'A social app for finding drinking buddies nearby: a feed for where the vibe is tonight, plus swipe-to-match and private chat. Now in public beta.',
+    problem:
+      'Sitting at a bar alone with a six-pack is no fun, and the bar down the road might be the one with the vibe tonight. People in Kampala had no simple way to say "I\u2019m drinking here, who\u2019s joining?" or to find good company nearby, without it turning into a dating app.',
+    solution:
+      'We designed and built Beer BROS: a familiar feed where people post where they are, with photos, likes and replies, and a Discover tab where you swipe on people nearby. When two people both say yes, they can message and agree where to meet. Anyone can browse the feed without an account; posting, swiping and chat need a free sign-up. It is 18+ only, with report and block on every post and chat, an admin console, and password reset by email. Distance ranges and a "drinking now" status come next, then the Play Store and App Store apps.',
+    disciplines: ['Website', 'Software'],
+    deliverables: [
+      'Social feed with photo posts',
+      'Swipe-to-match discovery',
+      'Match-only private messaging',
+      'Guest browsing + free sign-up',
+      'Report, block & admin console',
+      'Password reset by email',
+      'Mobile apps (next)',
+    ],
+    stack: ['React', 'TypeScript', 'Node.js', 'Express', 'PostgreSQL', 'Neon', 'Render', 'Vercel', 'Brevo'],
+    link: 'https://beer-bros-nine.vercel.app',
+    cover_url: '/projects/beer-bros/cover.jpg',
+    sections: [
+      {
+        title: 'The feed',
+        body: 'Built to feel instantly familiar: a three-column layout on desktop and a bottom tab bar on phones. People post where they are drinking and drop a photo; big phone photos are shrunk before upload so posting works on mobile data. Shown here with sample posts.',
+        media: ['/projects/beer-bros/cover.jpg', '/projects/beer-bros/app-feed.jpg', '/projects/beer-bros/app-mobile.jpg'],
+      },
+      {
+        title: 'Swipe to find a buddy',
+        body: 'Discover is opt-in: only people who choose to appear can be swiped on. Pass or Interested, and when both people say yes it becomes a match.',
+        media: ['/projects/beer-bros/app-discover.jpg', '/projects/beer-bros/app-mobile-discover.jpg'],
+      },
+      {
+        title: 'Chat after a match',
+        body: 'Private messages open only between matched people, so nobody gets messaged by strangers. Report and block sit on every post and conversation.',
+        media: ['/projects/beer-bros/app-messages.jpg'],
+      },
+      {
+        title: 'Free to join, easy to start',
+        body: 'Visitors can browse before signing up. Sign-up asks for just a name, email, password and date of birth; the username is created automatically and the 18+ check runs on the server.',
+        media: ['/projects/beer-bros/app-sign-up.jpg'],
+      },
+    ],
+  }),
+  p({
     slug: 'zzimba-ug',
     name: 'Zzimba UG',
     client: 'Nova Works',
