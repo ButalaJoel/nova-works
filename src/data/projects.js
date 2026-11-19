@@ -252,6 +252,66 @@ export const projects = [
 
   // ---------------- OTHER CLIENT WORK ----------------
   p({
+    slug: 'bling-fest',
+    name: 'Bling Fest',
+    client: 'Bling Fest · Canvas Alive',
+    status: 'live',
+    sector: 'Events · Creative marketplace',
+    featured: true,
+    sort_order: 3,
+    summary: 'Website, creative marketplace and admin dashboard for an art exhibition, fashion runway and market in Kampala, 12–13 December 2026.',
+    problem:
+      'Bling Fest brings small businesses, artists, portrait painters and designers together for one weekend. But a market day ends, and the customers leave with it. The organisers also needed a fair, organised way to take in and review hundreds of vendor applications.',
+    solution:
+      'We built a bold event site with a live countdown, three stages (art exhibition, fashion runway and creative market) and a vendor sign-up form. Every approved vendor gets their own storefront in the marketplace with a direct WhatsApp button, so they keep selling long after the fest. Behind it, an admin dashboard lets the team review applications, add private notes, approve or reject, and switch storefronts live or featured. Built to our security standard: secure sign-in, roles, rate limits, photo checks and an audit log.',
+    disciplines: ['Website', 'Software', 'Graphic design'],
+    deliverables: [
+      'Event website & countdown',
+      'Vendor applications with photos',
+      'Marketplace & vendor storefronts',
+      'WhatsApp ordering',
+      'Admin dashboard & team roles',
+      'Security pass & report',
+    ],
+    stack: ['React', 'TypeScript', 'Tailwind CSS', 'Node.js', 'Express', 'PostgreSQL', 'Cloudinary', 'Render'],
+    link: 'https://bling-fest.onrender.com',
+    cover_url: '/projects/bling-fest/cover.jpg',
+    sections: [
+      {
+        title: 'The event site',
+        body: 'Loud, colourful and unmistakably Kampala: purple, orange and cream, condensed type and cut-out photography. A countdown to opening day sits on the first screen, then the three stages and an open call to every small business.',
+        media: [
+          '/projects/bling-fest/site-home.jpg',
+          '/projects/bling-fest/site-experience.jpg',
+          '/projects/bling-fest/site-every-business.jpg',
+          '/projects/bling-fest/site-art-exhibition.jpg',
+          '/projects/bling-fest/site-runway.jpg',
+          '/projects/bling-fest/site-register.jpg',
+        ],
+      },
+      {
+        title: 'A marketplace that outlives the fest',
+        body: 'Every approved vendor gets a storefront: what they make, where they are, and a WhatsApp button straight to them. No checkout and no middleman; buyers find them by category or search, during the fest and after it. Shown here with sample vendors.',
+        media: [
+          '/projects/bling-fest/site-marketplace.jpg',
+          '/projects/bling-fest/site-storefront.jpg',
+          '/projects/bling-fest/site-mobile.jpg',
+          '/projects/bling-fest/site-mobile-market.jpg',
+        ],
+      },
+      {
+        title: 'Admin dashboard',
+        body: 'Applications by status and category at a glance. Reviewers read applications and add notes; owners approve, and an approved application becomes a hidden storefront that goes live with one switch. Shown here with sample data.',
+        media: [
+          '/projects/bling-fest/admin-overview.jpg',
+          '/projects/bling-fest/admin-applications.jpg',
+          '/projects/bling-fest/admin-application.jpg',
+          '/projects/bling-fest/admin-vendors.jpg',
+        ],
+      },
+    ],
+  }),
+  p({
     slug: 'vana-power-mart',
     name: 'Vana Power Mart',
     client: 'Vana Power Mart',
@@ -502,12 +562,12 @@ export const projects = [
     status: 'in-progress',
     sector: 'Entertainment · Streaming',
     sort_order: 8,
-    summary: 'Brand and app for a small movie and series streaming platform.',
-    problem: 'Viewers want one simple, affordable place to stream a curated selection of films and series, without the clutter of the big platforms.',
+    summary: 'Brand and app for a movie streaming platform, launching for testing with free classic films.',
+    problem: 'Viewers want one simple, affordable place to stream films and series, without the clutter and the price of the big platforms.',
     solution:
-      'We designed the BroFlix wordmark, with a play button inside the O, and built the app around it: a cinematic hero for the featured title, rows of trending movies and series, and a "More like this" row that changes as you pick a title. Accounts, the player and the catalogue are in development.',
+      'We designed the BroFlix wordmark, with a play button inside the O, and built the app around it: a cinematic hero for the featured title, rows by genre, a movies catalogue you can filter and sort, search, title pages with "More like this", a My List, accounts and a full-screen player. It launches for testing with public-domain classics streamed from the Internet Archive, then licensed films and series are added.',
     disciplines: ['Brand identity', 'Website', 'Software'],
-    deliverables: ['Logo & identity', 'Streaming web app', 'Browse & discovery', 'Player & accounts (in development)'],
+    deliverables: ['Logo & identity', 'Streaming web app', 'Catalogue, search & My List', 'Title pages & player', 'Accounts', 'Licensed catalogue (next)'],
     stack: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS'],
     cover_url: '/projects/broflix/cover.jpg',
     sections: [
@@ -518,8 +578,8 @@ export const projects = [
       },
       {
         title: 'Streaming app',
-        body: 'Dark, cinematic and quick to browse. The hero changes to whatever title you pick, and related titles follow.',
-        media: ['/projects/broflix/app-home.jpg', '/projects/broflix/app-rows.jpg', '/projects/broflix/app-mobile.jpg'],
+        body: 'Dark, cinematic and quick to browse: the featured film fills the screen with its rating, runtime and genres, and Play is one tap away. Rows by genre, filters and search do the rest.',
+        media: ['/projects/broflix/app-home.jpg', '/projects/broflix/app-login.jpg', '/projects/broflix/app-mobile.jpg'],
       },
     ],
   }),

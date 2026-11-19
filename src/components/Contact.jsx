@@ -215,7 +215,7 @@ export function Footer() {
       <div className="wrap">
         <p className="footer__legal">
           <span>© {year} {site.name}. {site.city}.</span>
-          <Link to="/admin">Studio login</Link>
+          {backend === 'supabase' && <Link to="/admin">Studio login</Link>}
         </p>
       </div>
     </footer>

@@ -19,13 +19,22 @@ function Setup() {
     <Shell narrow>
       <div className="adm-card">
         <Wordmark />
-        <h1>Connect the dashboard</h1>
-        <p className="adm-muted">
-          The dashboard needs a Supabase project to store enquiries, projects and images. Follow
-          the steps in the README ("Set up the dashboard"), then add these to <code>.env.local</code>{' '}
-          and to Vercel:
-        </p>
-        <pre className="adm-code">{`VITE_SUPABASE_URL=...\nVITE_SUPABASE_ANON_KEY=...`}</pre>
+        {import.meta.env.DEV ? (
+          <>
+            <h1>Connect the dashboard</h1>
+            <p className="adm-muted">
+              The dashboard needs a Supabase project to store enquiries, projects and images. Follow
+              the steps in the README ("Set up the dashboard"), then add these to <code>.env.local</code>{' '}
+              and to Vercel:
+            </p>
+            <pre className="adm-code">{`VITE_SUPABASE_URL=...\nVITE_SUPABASE_ANON_KEY=...`}</pre>
+          </>
+        ) : (
+          <>
+            <h1>Studio login</h1>
+            <p className="adm-muted">This area is for the Nova Works team.</p>
+          </>
+        )}
         <Link to="/" className="adm-btn adm-btn--ghost">Back to the site</Link>
       </div>
     </Shell>
