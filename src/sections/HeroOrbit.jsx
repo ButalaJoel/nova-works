@@ -146,7 +146,7 @@ export default function HeroOrbit({ ready }) {
             </OrbitCard>
             <OrbitCard className="oc--e" depth={0.9}>
               <span className="oc__swatch oc__swatch--ink" />
-              <span className="oc__text"><b>{ms?.name || 'MS Home Security'}</b><small>Identity · Stationery · Merch</small></span>
+              <span className="oc__text"><b>{ms?.name || 'MS Security Systems'}</b><small>Identity · Stationery · Merch</small></span>
             </OrbitCard>
           </div>
         </div>

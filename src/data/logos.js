@@ -3,7 +3,7 @@
 export const logos = [
   { name: 'Nova Works', file: '/logos/nova-works.jpg', note: 'Our own studio', slug: '' },
   { name: 'Concrete Finisher UG', file: '/logos/concrete-finisher.jpg', note: 'Concrete & flooring', slug: 'concrete-finisher-ug' },
-  { name: 'MS Home Security Solutions', file: '/logos/ms-home-security.jpg', note: 'Security equipment', slug: 'ms-home-security' },
+  { name: 'MS Security Systems Ltd', file: '/logos/ms-home-security.jpg', note: 'Security equipment', slug: 'ms-home-security' },
   { name: 'The Plug', file: '/logos/the-plug.jpg', note: 'Games & phones retail', slug: 'the-plug' },
   { name: 'BroFlix', file: '/logos/broflix.jpg', note: 'Streaming', slug: 'broflix' },
   { name: 'The Legacy of Love Global Foundation', file: '/logos/legacy-of-love.jpg', note: 'Children’s foundation', slug: 'legacy-of-love' },
