@@ -571,6 +571,36 @@ export const projects = [
     ],
   }),
   p({
+    slug: 'joelverse',
+    name: 'JOELVERSE',
+    client: 'Nova Works venture',
+    category: 'venture',
+    status: 'live',
+    sector: 'Personal portfolio · 3D web',
+    sort_order: 8,
+    summary: 'A portfolio you ride: hop on a boda boda and explore a tiny 3D Kampala to see my work, CV and contacts.',
+    problem: 'A PDF CV and a grid of thumbnails look like everyone else\'s. I wanted a portfolio people remember and actually spend time in, that still works for a recruiter in a hurry.',
+    solution:
+      'I built a small 3D city in the browser. You ride a boda through districts for marketing, creative, digital, business and innovation work, with billboards for each project; ride onto a glowing circle to open the case study, the CV or the contact centre. There is a mini-map and a full map to jump anywhere, engine sound and a hooter, and a Portfolio mode with filters plus a printable CV for anyone who just wants a normal page. Images load only as you ride close, so it stays light on phones.',
+    disciplines: ['Website', 'Software', 'Graphic design'],
+    deliverables: ['3D city & boda ride', 'Districts & project billboards', 'Mini-map & jump-to map', 'Case studies', 'Portfolio mode', 'Printable CV'],
+    stack: ['Next.js', 'React', 'TypeScript', 'Three.js', 'Web Audio', 'Tailwind CSS'],
+    link: 'https://joelverse.onrender.com',
+    cover_url: '/projects/joelverse/cover.jpg',
+    sections: [
+      {
+        title: 'Start the engine',
+        body: 'One button starts the ride, the other opens the classic portfolio. A short welcome card explains the controls, then you are on the road.',
+        media: ['/projects/joelverse/start.jpg', '/projects/joelverse/welcome.jpg'],
+      },
+      {
+        title: 'Ride through mini Kampala',
+        body: 'A roundabout at the centre, road signs to each district, and boda stages, a rolex stand and buses along the way. Every project has its own billboard.',
+        media: ['/projects/joelverse/cover.jpg', '/projects/joelverse/roundabout.jpg'],
+      },
+    ],
+  }),
+  p({
     slug: 'beer-bros',
     name: 'Beer BROS',
     client: 'Nova Works venture',
