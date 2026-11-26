@@ -43,16 +43,17 @@ export const projects = [
     slug: 'peacock-paints',
     name: 'Peacock Paints',
     client: 'Peacock Paints Ltd',
-    status: 'in-progress',
+    status: 'live',
     sector: 'Paint manufacturing',
     featured: true,
+    link: 'https://www.peacock.co.ug',
     sort_order: 1,
     summary:
       'Packaging, product mockups, a 92-page catalogue, social media, video and a new website for "The Painters\u2019 Paint".',
     problem:
       'A Ugandan paint brand clients have known for about 30 years had a wide range of decorative, industrial, waterproofing and wood care products, but no single system tying its logo, packaging, catalogue and social media together, and no website it fully owns.',
     solution:
-      'We designed packaging and product mockups across the range, produced the 2026 product catalogue, and run the social media with posters and short videos. A catalogue website with colour systems, data sheets and quote requests is in build.',
+      'We designed packaging and product mockups across the range, produced the 2026 product catalogue, and run the social media with posters and short videos. We also built and launched a catalogue website the company fully owns, with colour systems, data sheets, quote requests and a staff dashboard, live at peacock.co.ug.',
     disciplines: ['Packaging', 'Graphic design', 'Print & stationery', 'Social media', 'Video ads', 'Website'],
     deliverables: [
       'Packaging & labels',
@@ -119,7 +120,7 @@ export const projects = [
       },
       {
         title: 'Website',
-        body: 'A catalogue website the company fully owns, in final review before launch on peacock.co.ug. Every product with its specs and pack sizes, colour collections matched to Peacock, NCS, BS 4800, NOVA and RAL, quote requests instead of prices, and a Paint Advisor that answers from the catalogue by text or voice.',
+        body: 'A catalogue website the company fully owns, live on www.peacock.co.ug since November 2026. Every product with its specs and pack sizes, colour collections matched to Peacock, NCS, BS 4800, NOVA and RAL, quote requests instead of prices, and a Paint Advisor that answers from the catalogue by text or voice.',
         media: [
           '/projects/peacock-paints/website-home.jpg',
           '/projects/peacock-paints/website-products.jpg',
