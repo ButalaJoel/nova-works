@@ -43,16 +43,17 @@ export const projects = [
     slug: 'peacock-paints',
     name: 'Peacock Paints',
     client: 'Peacock Paints Ltd',
-    status: 'in-progress',
+    status: 'live',
     sector: 'Paint manufacturing',
     featured: true,
+    link: 'https://www.peacock.co.ug',
     sort_order: 1,
     summary:
       'Packaging, product mockups, a 92-page catalogue, social media, video and a new website for "The Painters\u2019 Paint".',
     problem:
       'A Ugandan paint brand clients have known for about 30 years had a wide range of decorative, industrial, waterproofing and wood care products, but no single system tying its logo, packaging, catalogue and social media together, and no website it fully owns.',
     solution:
-      'We designed packaging and product mockups across the range, produced the 2026 product catalogue, and run the social media with posters and short videos. A catalogue website with colour systems, data sheets and quote requests is in build.',
+      'We designed packaging and product mockups across the range, produced the 2026 product catalogue, and run the social media with posters and short videos. We also built and launched a catalogue website the company fully owns, with colour systems, data sheets, quote requests and a staff dashboard, live at peacock.co.ug.',
     disciplines: ['Packaging', 'Graphic design', 'Print & stationery', 'Social media', 'Video ads', 'Website'],
     deliverables: [
       'Packaging & labels',
@@ -119,7 +120,7 @@ export const projects = [
       },
       {
         title: 'Website',
-        body: 'A catalogue website the company fully owns, in final review before launch on peacock.co.ug. Every product with its specs and pack sizes, colour collections matched to Peacock, NCS, BS 4800, NOVA and RAL, quote requests instead of prices, and a Paint Advisor that answers from the catalogue by text or voice.',
+        body: 'A catalogue website the company fully owns, live on www.peacock.co.ug since November 2026. Every product with its specs and pack sizes, colour collections matched to Peacock, NCS, BS 4800, NOVA and RAL, quote requests instead of prices, and a Paint Advisor that answers from the catalogue by text or voice.',
         media: [
           '/projects/peacock-paints/website-home.jpg',
           '/projects/peacock-paints/website-products.jpg',
@@ -566,6 +567,36 @@ export const projects = [
         title: 'Streaming app',
         body: 'Dark, cinematic and quick to browse: the featured film fills the screen with its rating, runtime and genres, and Play is one tap away. Rows by genre, filters and search do the rest.',
         media: ['/projects/broflix/app-home.jpg', '/projects/broflix/app-login.jpg', '/projects/broflix/app-mobile.jpg'],
+      },
+    ],
+  }),
+  p({
+    slug: 'joelverse',
+    name: 'JOELVERSE',
+    client: 'Nova Works venture',
+    category: 'venture',
+    status: 'live',
+    sector: 'Personal portfolio · 3D web',
+    sort_order: 8,
+    summary: 'A portfolio you ride: hop on a boda boda and explore a tiny 3D Kampala to see my work, CV and contacts.',
+    problem: 'A PDF CV and a grid of thumbnails look like everyone else\'s. I wanted a portfolio people remember and actually spend time in, that still works for a recruiter in a hurry.',
+    solution:
+      'I built a small 3D city in the browser. You ride a boda through districts for marketing, creative, digital, business and innovation work, with billboards for each project; ride onto a glowing circle to open the case study, the CV or the contact centre. There is a mini-map and a full map to jump anywhere, engine sound and a hooter, and a Portfolio mode with filters plus a printable CV for anyone who just wants a normal page. Images load only as you ride close, so it stays light on phones.',
+    disciplines: ['Website', 'Software', 'Graphic design'],
+    deliverables: ['3D city & boda ride', 'Districts & project billboards', 'Mini-map & jump-to map', 'Case studies', 'Portfolio mode', 'Printable CV'],
+    stack: ['Next.js', 'React', 'TypeScript', 'Three.js', 'Web Audio', 'Tailwind CSS'],
+    link: 'https://joelverse.onrender.com',
+    cover_url: '/projects/joelverse/cover.jpg',
+    sections: [
+      {
+        title: 'Start the engine',
+        body: 'One button starts the ride, the other opens the classic portfolio. A short welcome card explains the controls, then you are on the road.',
+        media: ['/projects/joelverse/start.jpg', '/projects/joelverse/welcome.jpg'],
+      },
+      {
+        title: 'Ride through mini Kampala',
+        body: 'A roundabout at the centre, road signs to each district, and boda stages, a rolex stand and buses along the way. Every project has its own billboard.',
+        media: ['/projects/joelverse/cover.jpg', '/projects/joelverse/roundabout.jpg'],
       },
     ],
   }),
